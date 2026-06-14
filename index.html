@@ -118,8 +118,16 @@ section:nth-child(even){background:var(--color-bg-secondary);}
 
 /* ── PROJECTS ── */
 .projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem;}
-.project-card{background:var(--color-bg-card);border:1px solid var(--color-border);border-radius:4px;overflow:hidden;transition:border-color 280ms var(--ease),transform 280ms var(--ease),box-shadow 280ms var(--ease);}
+.project-card{background:var(--color-bg-card);border:1px solid var(--color-border);cursor: pointer;border-radius:4px;overflow:hidden;transition:border-color 280ms var(--ease),transform 280ms var(--ease),box-shadow 280ms var(--ease);}
 .project-card:hover{border-color:var(--color-border-active);transform:translateY(-3px);box-shadow:var(--shadow-cyan);}
+.project-link {
+  margin-top: 1rem;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-accent-cyan);
+}
 .project-top{height:3px;background:linear-gradient(to right,var(--color-accent-cyan),rgba(0,188,212,0.3));}
 .project-body{padding:1.5rem;}
 .project-tag{font-family:var(--font-mono);font-size:9px;letter-spacing:0.14em;text-transform:uppercase;padding:3px 10px;border:1px solid var(--color-border-active);color:var(--color-accent-cyan);background:var(--color-accent-glow);border-radius:2px;margin-bottom:0.85rem;display:inline-block;}
@@ -413,132 +421,143 @@ footer{background:#050505;border-top:1px solid var(--color-border);padding:2rem 
 
   <div class="projects-grid">
 
-    <div class="project-card">
-  <div class="project-top"></div>
-  <div class="project-body">
-    <span class="project-tag">Data & BI</span>
-    <h3 class="project-title">HR Analytics Dashboard</h3>
-    <p class="project-desc">End-to-end HR analytics project — SQL data pipeline feeding an interactive Power BI dashboard tracking headcount, turnover rate, salary equity, and performance across 311 employees and 6 departments.</p>
-    <div class="project-stack">
-      <span class="stack-pill">Power BI</span>
-      <span class="stack-pill">SQL</span>
-      <span class="stack-pill">DAX</span>
-      <span class="stack-pill">SQLite</span>
-      <span class="stack-pill">HR Analytics</span>
-    </div>
-  </div>
-</div>
+    <div class="projects-grid">
 
-    <div class="project-card">
-      <div class="project-top"></div>
-      <div class="project-body">
-        <span class="project-tag">Systems Development</span>
-        <h3 class="project-title">Cloud-Based POS & Inventory System</h3>
-        <p class="project-desc">Researched operational bottlenecks in campus dining services and built a C# / ASP.NET inventory management solution integrated with real-time Power BI dashboards. Presented findings to stakeholders through professional reports.</p>
-        <div class="project-stack">
-          <span class="stack-pill">C# / ASP.NET</span>
-          <span class="stack-pill">Power BI</span>
-          <span class="stack-pill">SQL</span>
-          <span class="stack-pill">Stakeholder Reporting</span>
-        </div>
+  <div class="project-card" onclick="window.open('https://github.com/zondi11/PORTFOLIO', '_blank')">
+    <div class="project-top"></div>
+    <div class="project-body">
+      <span class="project-tag">Systems Development</span>
+      <h3 class="project-title">Cloud-Based POS & Inventory System</h3>
+      <p class="project-desc">Researched operational bottlenecks in campus dining services and built a C# / ASP.NET inventory management solution integrated with real-time Power BI dashboards. Presented findings to stakeholders through professional reports.</p>
+      <div class="project-stack">
+        <span class="stack-pill">C# / ASP.NET</span>
+        <span class="stack-pill">Power BI</span>
+        <span class="stack-pill">SQL</span>
+        <span class="stack-pill">Stakeholder Reporting</span>
       </div>
-    </div>
-
-<div class="project-card">
-  <div class="project-top"></div>
-  <div class="project-body">
-    <span class="project-tag">Full-Stack Web App</span>
-    <h3 class="project-title">Zondi Health Clinic System</h3>
-    <p class="project-desc">A full-stack clinic management web application — Python Flask backend, SQLite database, and a clean professional frontend with live KPI dashboard, patient management, appointment booking, and billing tracking.</p>
-    <div class="project-stack">
-      <span class="stack-pill">Python</span>
-      <span class="stack-pill">Flask</span>
-      <span class="stack-pill">SQLite</span>
-      <span class="stack-pill">HTML/CSS</span>
-      <span class="stack-pill">JavaScript</span>
-      <span class="stack-pill">Chart.js</span>
+      <div class="project-link">View on GitHub →</div>
     </div>
   </div>
-</div>
 
-    <div class="project-card">
-  <div class="project-top"></div>
-  <div class="project-body">
-    <span class="project-tag">Python & Data Analysis</span>
-    <h3 class="project-title">HR Labour Analysis — Python</h3>
-    <p class="project-desc">End-to-end Python data analysis project — loading, cleaning and analysing HR data for 311 employees, producing 7 visualisations covering turnover, salary equity, performance, and hiring trends.</p>
-    <div class="project-stack">
-      <span class="stack-pill">Python</span>
-      <span class="stack-pill">Pandas</span>
-      <span class="stack-pill">Matplotlib</span>
-      <span class="stack-pill">Seaborn</span>
-      <span class="stack-pill">Jupyter</span>
-    </div>
-  </div>
-</div>
-
-<div class="project-card">
-  <div class="project-top"></div>
-  <div class="project-body">
-    <span class="project-tag">SQL & Database Design</span>
-    <h3 class="project-title">Clinic Management System</h3>
-    <p class="project-desc">Designed and implemented a fully normalised relational database for a fictional private clinic — 6 tables, foreign key constraints, sample data, and 10 analytical queries covering patients, appointments, diagnoses, prescriptions, and billing.</p>
-    <div class="project-stack">
-      <span class="stack-pill">SQL</span>
-      <span class="stack-pill">SQLite</span>
-      <span class="stack-pill">DBeaver</span>
-      <span class="stack-pill">Database Design</span>
-      <span class="stack-pill">ERD</span>
-    </div>
-  </div>
-</div>
-
-<div class="project-card">
-  <div class="project-top"></div>
-  <div class="project-body">
-    <span class="project-tag">Business Analysis</span>
-    <h3 class="project-title">Retail System Upgrade — BA Case Study</h3>
-    <p class="project-desc">End-to-end BA engagement for a fictional SA retail chain — stakeholder interviews, As-Is/To-Be process maps, data validation of 5,401 customer records, full BRD with 20 functional requirements, and an executive stakeholder presentation with R950,000 business case.</p>
-    <div class="project-stack">
-      <span class="stack-pill">Requirements Gathering</span>
-      <span class="stack-pill">Process Mapping</span>
-      <span class="stack-pill">BRD</span>
-      <span class="stack-pill">MoSCoW</span>
-      <span class="stack-pill">Data Validation</span>
-      <span class="stack-pill">Stakeholder Management</span>
-    </div>
-  </div>
-</div>
-
-    <div class="project-card">
-      <div class="project-top"></div>
-      <div class="project-body">
-        <span class="project-tag">Business Analysis</span>
-        <h3 class="project-title">Business Requirements Analysis Case Study</h3>
-        <p class="project-desc">Led a team project to gather and document business requirements for a system upgrade using structured interviews and workshops. Performed data analysis to validate requirements against existing processes and developed visualisations to support decision-making.</p>
-        <div class="project-stack">
-          <span class="stack-pill">Requirements Gathering</span>
-          <span class="stack-pill">Data Analysis</span>
-          <span class="stack-pill">Process Mapping</span>
-          <span class="stack-pill">Power BI</span>
-        </div>
+  <div class="project-card" onclick="window.open('https://github.com/zondi11/ba-case-study', '_blank')">
+    <div class="project-top"></div>
+    <div class="project-body">
+      <span class="project-tag">Business Analysis</span>
+      <h3 class="project-title">Business Requirements Analysis Case Study</h3>
+      <p class="project-desc">Led a team project to gather and document business requirements for a system upgrade using structured interviews and workshops. Performed data analysis to validate requirements against existing processes and developed visualisations to support decision-making.</p>
+      <div class="project-stack">
+        <span class="stack-pill">Requirements Gathering</span>
+        <span class="stack-pill">Data Analysis</span>
+        <span class="stack-pill">Process Mapping</span>
+        <span class="stack-pill">Power BI</span>
       </div>
+      <div class="project-link">View on GitHub →</div>
     </div>
+  </div>
 
-    <div class="project-card">
-      <div class="project-top"></div>
-      <div class="project-body">
-        <span class="project-tag">Data & BI</span>
-        <h3 class="project-title">Sales Performance Dashboard</h3>
-        <p class="project-desc">Designed and implemented an interactive Power BI dashboard analysing sales data from a simulated dataset, identifying key trends and business improvement opportunities. Conducted SQL ETL processes to clean and standardise data, and presented findings to stakeholders.</p>
-        <div class="project-stack">
-          <span class="stack-pill">Power BI</span>
-          <span class="stack-pill">SQL / ETL</span>
-          <span class="stack-pill">Data Visualisation</span>
-          <span class="stack-pill">KPI Analysis</span>
-        </div>
+  <div class="project-card" onclick="window.open('https://github.com/zondi11/hr-analytics-dashboard', '_blank')">
+    <div class="project-top"></div>
+    <div class="project-body">
+      <span class="project-tag">Data & BI</span>
+      <h3 class="project-title">Sales Performance Dashboard</h3>
+      <p class="project-desc">Designed and implemented an interactive Power BI dashboard analysing sales data from a simulated dataset, identifying key trends and business improvement opportunities. Conducted SQL ETL processes to clean and standardise data, and presented findings to stakeholders.</p>
+      <div class="project-stack">
+        <span class="stack-pill">Power BI</span>
+        <span class="stack-pill">SQL / ETL</span>
+        <span class="stack-pill">Data Visualisation</span>
+        <span class="stack-pill">KPI Analysis</span>
       </div>
+      <div class="project-link">View on GitHub →</div>
     </div>
+  </div>
+
+  <div class="project-card" onclick="window.open('https://github.com/zondi11/hr-analytics-dashboard', '_blank')">
+    <div class="project-top"></div>
+    <div class="project-body">
+      <span class="project-tag">Data & BI</span>
+      <h3 class="project-title">HR Analytics Dashboard</h3>
+      <p class="project-desc">End-to-end HR analytics project — SQL data pipeline feeding an interactive Power BI dashboard tracking headcount, turnover rate, salary equity, and performance across 311 employees and 6 departments.</p>
+      <div class="project-stack">
+        <span class="stack-pill">Power BI</span>
+        <span class="stack-pill">SQL</span>
+        <span class="stack-pill">DAX</span>
+        <span class="stack-pill">SQLite</span>
+        <span class="stack-pill">HR Analytics</span>
+      </div>
+      <div class="project-link">View on GitHub →</div>
+    </div>
+  </div>
+
+  <div class="project-card" onclick="window.open('https://github.com/zondi11/sa-labour-analysis', '_blank')">
+    <div class="project-top"></div>
+    <div class="project-body">
+      <span class="project-tag">Python & Data Analysis</span>
+      <h3 class="project-title">HR Labour Analysis — Python</h3>
+      <p class="project-desc">End-to-end Python data analysis project — loading, cleaning and analysing HR data for 311 employees, producing 7 visualisations covering turnover, salary equity, performance, and hiring trends.</p>
+      <div class="project-stack">
+        <span class="stack-pill">Python</span>
+        <span class="stack-pill">Pandas</span>
+        <span class="stack-pill">Matplotlib</span>
+        <span class="stack-pill">Seaborn</span>
+        <span class="stack-pill">Jupyter</span>
+      </div>
+      <div class="project-link">View on GitHub →</div>
+    </div>
+  </div>
+
+  <div class="project-card" onclick="window.open('https://github.com/zondi11/clinic-db', '_blank')">
+    <div class="project-top"></div>
+    <div class="project-body">
+      <span class="project-tag">SQL & Database Design</span>
+      <h3 class="project-title">Clinic Management System</h3>
+      <p class="project-desc">Designed and implemented a fully normalised relational database for a fictional private clinic — 6 tables, foreign key constraints, sample data, and 10 analytical queries covering patients, appointments, diagnoses, prescriptions, and billing.</p>
+      <div class="project-stack">
+        <span class="stack-pill">SQL</span>
+        <span class="stack-pill">SQLite</span>
+        <span class="stack-pill">DBeaver</span>
+        <span class="stack-pill">Database Design</span>
+        <span class="stack-pill">ERD</span>
+      </div>
+      <div class="project-link">View on GitHub →</div>
+    </div>
+  </div>
+
+  <div class="project-card" onclick="window.open('https://github.com/zondi11/ba-case-study', '_blank')">
+    <div class="project-top"></div>
+    <div class="project-body">
+      <span class="project-tag">Business Analysis</span>
+      <h3 class="project-title">Retail System Upgrade — BA Case Study</h3>
+      <p class="project-desc">End-to-end BA engagement for a fictional SA retail chain — stakeholder interviews, As-Is/To-Be process maps, data validation of 5,401 customer records, full BRD with 20 functional requirements, and an executive stakeholder presentation with R950,000 business case.</p>
+      <div class="project-stack">
+        <span class="stack-pill">Requirements Gathering</span>
+        <span class="stack-pill">Process Mapping</span>
+        <span class="stack-pill">BRD</span>
+        <span class="stack-pill">MoSCoW</span>
+        <span class="stack-pill">Data Validation</span>
+      </div>
+      <div class="project-link">View on GitHub →</div>
+    </div>
+  </div>
+
+  <div class="project-card" onclick="window.open('https://github.com/zondi11/clinic-app', '_blank')">
+    <div class="project-top"></div>
+    <div class="project-body">
+      <span class="project-tag">Full-Stack Web App</span>
+      <h3 class="project-title">Zondi Health Clinic System</h3>
+      <p class="project-desc">A full-stack clinic management web application — Python Flask backend, SQLite database, and a clean professional frontend with live KPI dashboard, patient management, appointment booking, and billing tracking.</p>
+      <div class="project-stack">
+        <span class="stack-pill">Python</span>
+        <span class="stack-pill">Flask</span>
+        <span class="stack-pill">SQLite</span>
+        <span class="stack-pill">HTML/CSS</span>
+        <span class="stack-pill">JavaScript</span>
+        <span class="stack-pill">Chart.js</span>
+      </div>
+      <div class="project-link">View on GitHub →</div>
+    </div>
+  </div>
+
+</div>
 
   </div>
 </section>
